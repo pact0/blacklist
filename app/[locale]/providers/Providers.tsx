@@ -1,21 +1,16 @@
-// app/[locale]/providers.tsx
 "use client";
 
-import { NextIntlClientProvider } from "next-intl";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-function Providers({
-  children,
-  locale,
-  messages,
-}: {
-  children: React.ReactNode;
-  locale: string;
-  messages: Record<string, string>;
-}) {
+const queryClient = new QueryClient();
+
+function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false} />
       {children}
-    </NextIntlClientProvider>
+    </QueryClientProvider>
   );
 }
 

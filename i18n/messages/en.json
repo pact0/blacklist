@@ -2,5 +2,11 @@
   "HomePage": {
     "title": "Hello world!",
     "about": "Go to the about page"
+  },
+  "BlacklistPage": {
+    "title": "Blacklist Page",
+    "home": "Go to the home page",
+    "desc": "Go to the about page",
+    "refresh_blacklist": "Refresh Blacklist"
   }
 }
