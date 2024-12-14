@@ -7,7 +7,7 @@ import React from "react";
 
 const LOCALE_MAP = {
   en: enUS,
-  pl: pl,
+  // pl: pl,
 } satisfies Record<i18nLocales, Locale>;
 
 interface Props {
