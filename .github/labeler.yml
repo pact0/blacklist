@@ -1,0 +1,15 @@
+parts:
+  - changed-files:
+      - any-glob-to-any-file: parts/**/*
+docs:
+  - changed-files:
+      - any-glob-to-any-file: docs/*
+plugins:
+  - changed-files:
+      - any-glob-to-any-file: config/plug/**/*
+treewide:
+  - changed-files:
+      - any-glob-to-any-file: "*"
+CI:
+  - changed-files:
+      - any-glob-to-any-file: .github/workflows/*

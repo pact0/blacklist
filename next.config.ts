@@ -1,8 +1,21 @@
+import { fileURLToPath } from "url";
 import type { NextConfig } from "next";
+import createJiti from "jiti";
+import createNextIntlPlugin from "next-intl/plugin";
 
-const nextConfig: NextConfig = {
+const withNextIntl = createNextIntlPlugin();
+
+const { version } = createJiti(fileURLToPath(import.meta.url))(
+  "./package.json",
+);
+
+const config: NextConfig = {
   output: "export",
   basePath: "/blacklist",
+
+  publicRuntimeConfig: {
+    version,
+  },
 };
 
-export default nextConfig;
+export default withNextIntl(config);
