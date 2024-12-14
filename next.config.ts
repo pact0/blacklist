@@ -1,8 +1,8 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: '/your-repo-name',
+  output: "export",
+  basePath: "/blacklist",
 };
 
 export default nextConfig;
