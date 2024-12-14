@@ -4,7 +4,6 @@
 
     ./hooks/exiftool.nix
     ./hooks/prettier.nix
-    ./hooks/typos.nix
   ];
 
   perSystem = {
