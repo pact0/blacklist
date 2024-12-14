@@ -1,9 +1,9 @@
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { locales } from "@/i18n";
+import { LOCALES } from "@i18n/LOCALES";
 import { NextIntlClientProvider } from "next-intl";
 
 export async function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return LOCALES.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout({
