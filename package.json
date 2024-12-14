@@ -8,7 +8,6 @@
   "dependencies": {
     "@tanstack/react-query": "^5.62.7",
     "@tanstack/react-query-devtools": "^5.62.7",
-    "@types": "link:papaparse/@types",
     "date-fns": "^4.1.0",
     "next": "15.0.1",
     "next-intl": "^3.9.5",
@@ -19,6 +18,7 @@
   "devDependencies": {
     "@tanstack/eslint-plugin-query": "^5.62.1",
     "@types/node": "^20",
+    "@types/papaparse": "^5.3.15",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "jiti": "^1.21.6",

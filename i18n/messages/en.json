@@ -7,6 +7,11 @@
     "title": "Blacklist Page",
     "home": "Go to the home page",
     "desc": "Go to the about page",
-    "refresh_blacklist": "Refresh Blacklist"
+    "refresh_blacklist": "Refresh Blacklist",
+    "loading_blacklist": "Loading Blacklist",
+    "failed_blacklist": "Failed to load blacklist"
+  },
+  "Date": {
+    "unknown": "Unknown"
   }
 }

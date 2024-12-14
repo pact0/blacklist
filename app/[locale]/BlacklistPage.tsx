@@ -2,9 +2,10 @@ import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import Papa from "papaparse";
 import { RefreshBlacklist } from "./RefreshBlacklist";
-import { format, isValid, parse } from "date-fns";
-import { enUS, fr, es, pl } from "date-fns/locale";
-// Updated interface to match enhanced parsing
+import { parse } from "date-fns";
+import { LocalizedDate } from "./LocalizedDate";
+import { useTranslations } from "next-intl";
+
 interface BlacklistEntry {
   account_name: string;
   discord_id: number | null;
@@ -13,7 +14,6 @@ interface BlacklistEntry {
   active: boolean;
 }
 
-// Helper function to parse active field
 const parseActiveField = (value: unknown): boolean => {
   if (value == null) return false;
 
@@ -24,10 +24,9 @@ const parseActiveField = (value: unknown): boolean => {
   if (positiveValues.includes(normalizedValue)) return true;
   if (negativeValues.includes(normalizedValue)) return false;
 
-  return false; // default to false if unrecognized
+  return false;
 };
 
-// Helper function to parse date
 const parseDate = (dateString: string): Date => {
   const cleanedDate = cleanText(dateString);
 
@@ -37,18 +36,11 @@ const parseDate = (dateString: string): Date => {
   return parsedDate;
 };
 
-// Helper function to clean text
 const cleanText = (text: unknown): string => {
   if (text == null) return "";
-
-  return String(text)
-    .trim()
-    .replace(/^"|"$/g, "") // Remove surrounding quotes
-    .replace(/\s+/g, " ") // Normalize whitespace
-    .trim();
+  return String(text).trim().replace(/^"|"$/g, "").replace(/\s+/g, " ").trim();
 };
 
-// Helper function to parse discord ID
 const parseDiscordId = (id: unknown): number | null => {
   if (id == null || id === "") return null;
 
@@ -58,7 +50,6 @@ const parseDiscordId = (id: unknown): number | null => {
   return isNaN(parsedId) ? null : parsedId;
 };
 
-// Fetch function for React Query
 const fetchBlacklistData = async (): Promise<BlacklistEntry[]> => {
   const csvUrl =
     "https://raw.githubusercontent.com/The-Forbidden-Trove/ForbiddenTroveBlacklist/main/blacklist.csv";
@@ -78,7 +69,6 @@ const fetchBlacklistData = async (): Promise<BlacklistEntry[]> => {
       transformHeader: (header: string) => header.toLowerCase().trim(),
       skipEmptyLines: true,
       escapeChar: '"',
-
       complete: (results) => {
         const processedEntries = results.data
           .filter((entry: any) => {
@@ -107,40 +97,28 @@ const BlacklistFetcher: React.FC = () => {
     data: blacklist,
     isLoading,
     isError,
-    error,
   } = useQuery<BlacklistEntry[]>({
     queryKey: ["blacklist"],
     queryFn: fetchBlacklistData,
-    staleTime: 1000 * 60 * 5, // 1 hour
-    refetchInterval: 1000 * 60 * 5, // 24 hours
+    staleTime: 1000 * 60 * 5,
+    refetchInterval: 1000 * 60 * 5,
   });
+  const t = useTranslations("BlacklistPage");
 
-  if (isLoading) return <div>Loading blacklist...</div>;
-  if (isError)
-    return (
-      <div>
-        Error: {error instanceof Error ? error.message : "Unknown error"}
-      </div>
-    );
+  if (isLoading) return <div>{t("loading_blacklist")}</div>;
+  if (isError) return <div>{t("failed_blacklist")}</div>;
 
   return (
     <div>
       <h2>Blacklisted Entries</h2>
       <RefreshBlacklist />
-      {blacklist?.map((entry) => {
-        const { account_name, discord_id, blacklisted_on, reason, active } =
-          entry;
+      {blacklist?.map((entry, idx) => {
+        const { account_name, discord_id, blacklisted_on, reason } = entry;
 
-        const formattedDate = isValid(blacklisted_on)
-          ? format(blacklisted_on, "PPPP", { locale: pl })
-          : "Unknown";
-
-        console.log(blacklisted_on, formattedDate);
         return (
-          <div
-          // key={`blEntry-${discord_id}-${account_name}-${reason}-${blacklisted_on.toISOString()}`}
-          >
-            {account_name} ({discord_id}) - {reason} - {formattedDate}
+          <div key={`blEntry-${discord_id}-${account_name}-${reason}-${idx}`}>
+            {account_name} ({discord_id}) - {reason}
+            <LocalizedDate date={blacklisted_on} />
           </div>
         );
       })}
