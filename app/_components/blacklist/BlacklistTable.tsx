@@ -74,6 +74,7 @@ export default function BlacklistTable({
 
     // global filter
     onGlobalFilterChange: setGlobalFilter,
+    // @ts-ignore
     globalFilterFn: "fuzzy", //apply fuzzy filter to the global
 
     autoResetExpanded: false,

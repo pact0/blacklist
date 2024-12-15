@@ -39,6 +39,7 @@ export default function GenericTable<T>({
             {headerGroup.headers.map((header) => {
               return (
                 <TableHead
+                  // @ts-ignore
                   className={header.column.columnDef.meta?.headerClassName}
                   key={header.id}
                 >
@@ -72,6 +73,7 @@ export default function GenericTable<T>({
             >
               {row.getVisibleCells().map((cell) => (
                 <TableCell
+                  // @ts-ignore
                   className={cn(cell.column.columnDef.meta?.cellClassName)}
                   key={cell.id}
                 >

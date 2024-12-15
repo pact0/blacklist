@@ -103,6 +103,7 @@ export function DatePickerWithRange<TData>({
             mode="range"
             defaultMonth={date?.from}
             selected={date}
+            // @ts-ignore
             onSelect={setDate}
             numberOfMonths={2}
           />

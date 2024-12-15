@@ -12,6 +12,7 @@ export default function Filter<TData>({
 }: {
   column: Column<TData, unknown>;
 }) {
+  // @ts-ignore
   const { filterVariant, filterValues } = column.columnDef.meta ?? {};
   // if (!filterParser || !filterKey) return null;
 
