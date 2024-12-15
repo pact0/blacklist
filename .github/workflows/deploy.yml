@@ -38,10 +38,11 @@ jobs:
       - name: Build the static site
         run: |
           pnpm build
+          # Create .nojekyll to prevent GitHub Pages from ignoring certain files
+          touch out/.nojekyll
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          enable_jekyll: false
