@@ -5,9 +5,6 @@ const withNextIntl = createNextIntlPlugin();
 
 const config: NextConfig = {
   output: "export",
-  // assetPrefix: "/",
-  // basePath: "/blacklist",
-
   images: { unoptimized: true },
 };
 
