@@ -45,7 +45,4 @@ next-env.d.ts
 .direnv/
 .direnv/**
 
-out/
-out/**
-
 .pre-commit-config.yaml
