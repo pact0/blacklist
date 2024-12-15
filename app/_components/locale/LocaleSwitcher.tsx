@@ -8,7 +8,7 @@ export default function LocaleSwitcher() {
   const locale = useLocale();
 
   return (
-    <LocaleSwitcherSelect defaultValue={locale} label={t("label")}>
+    <LocaleSwitcherSelect defaultValue={locale}>
       {routing.locales.map((cur) => (
         <SelectItem key={cur} value={cur}>
           {t("locale", { locale: cur })}
