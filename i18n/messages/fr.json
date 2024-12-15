@@ -1,0 +1,91 @@
+{
+  "HomePage": {
+    "title": "Bonjour le monde!",
+    "about": "Allez à la page à propos"
+  },
+  "Footer": {
+    "feedback": "Retour",
+    "support": "Support",
+    "terms_and_conditions": "Conditions générales",
+    "privacy_policy": "Politique de confidentialité",
+    "ggg": "Cet outil n'est pas affilié à Grinding Gear Games de quelque manière que ce soit."
+  },
+  "BlacklistPage": {
+    "title": "Page de liste noire",
+    "subtitle": "Vous pouvez voir les utilisateurs dans la liste noire ici.",
+    "home": "Aller à la page d'accueil",
+    "desc": "Aller à la page à propos",
+    "if_this_is_your_profile": "Si c'est votre profil et que vous pensez avoir été mis sur liste noire par erreur, veuillez faire appel.",
+    "refresh_blacklist": "Rafraîchir la liste noire",
+    "loading_blacklist": "Chargement de la liste noire",
+    "failed_blacklist": "Échec du chargement de la liste noire",
+    "profile_outdated": "Le lien du profil est obsolète - hash manquant",
+    "user_discord_id": "ID Discord de l'utilisateur {discordId}",
+    "user_discord_id_unknown": "ID Discord de l'utilisateur inconnu",
+    "appeal": "Faire appel",
+    "ban_appeal": "Faire appel de la sanction",
+    "user_not_found": "Utilisateur non trouvé",
+    "if_you_think_should_be_blacklisted": "Si vous pensez que cette personne devrait être mise sur liste noire, veuillez signaler cela sur TFT ainsi que directement dans le jeu.",
+    "report": "Signaler",
+    "find_user": "Trouver un utilisateur par ID Discord ou nom de profil",
+    "filter_by": "Vous pouvez filtrer par ID Discord ou nom de profil"
+  },
+  "Table": {
+    "columns": "Colonnes",
+    "no_results": "Aucun résultat",
+    "items_per_page": "Articles par page",
+    "currently_selected": "{current} sur {total} sélectionnés",
+    "currently_showing": "Disponible {total} articles",
+    "next": "Suivant",
+    "previous": "Précédent"
+  },
+  "TableHeader": {
+    "name": "Nom",
+    "reason": "Raison",
+    "discord_id": "ID Discord",
+    "profile_name": "Nom du profil",
+    "blacklisted_on": "Mis sur liste noire le",
+    "is_active": "Est actif",
+    "actions": "Actions"
+  },
+  "Filters": {
+    "search": "Rechercher...",
+    "all": "Tout",
+    "min": "Min",
+    "max": "Max",
+    "filter_info": "Filtrer par colonne",
+    "group_info": "Grouper par colonne",
+    "sort_info": "Trier par colonne"
+  },
+  "Date": {
+    "unknown": "Inconnu"
+  },
+  "LocaleSwitcher": {
+    "label": "Changer de langue",
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Español} fr {🇫🇷 Français} it {🇮🇹 Italiano} pt {🇵🇹 Português} zh {🇨🇳 中文} ja {🇯🇵 日本語} ko {🇰🇷 한국어} ru {🇷🇺 Русский} ar {🇸🇦 العربية} hi {🇮🇳 हिंदी} pl {🇵🇱 Polski} uk {🇺🇦 Українська} other {🌐 Unknown}}"
+  },
+  "ThemeSelector": {
+    "label": "Changer de thème",
+    "theme": "{theme, select, dark {Sombre} light {Clair} system {Système} other {Inconnu}}",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
+  },
+  "Links": {
+    "join_discord": "Rejoindre Discord"
+  },
+  "DataAge": {
+    "last_updated": "Dernière mise à jour : {date}",
+    "updated_at": "Mise à jour le",
+    "blacklisted_on": "Mis sur liste noire le"
+  },
+  "Toast": {
+    "success": "Succès",
+    "error": "Erreur",
+    "warning": "Avertissement",
+    "info": "Information",
+    "blacklist_updated": "Liste noire mise à jour",
+    "copied_to_clipboard": "Copié dans le presse-papiers",
+    "copied_discord_id_to_clipboard": "ID Discord copié dans le presse-papiers"
+  }
+}

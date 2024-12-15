@@ -16,7 +16,7 @@ export default function Header() {
 
         <Links />
 
-        <div>
+        <div className="flex items-center justify-center gap-x-2">
           <LocaleSwitcher />
           <ThemeSelector />
         </div>

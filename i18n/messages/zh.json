@@ -1,0 +1,91 @@
+{
+  "HomePage": {
+    "title": "你好，世界！",
+    "about": "前往关于页面"
+  },
+  "Footer": {
+    "feedback": "反馈",
+    "support": "支持",
+    "terms_and_conditions": "条款与条件",
+    "privacy_policy": "隐私政策",
+    "ggg": "本工具与Grinding Gear Games没有任何关联。"
+  },
+  "BlacklistPage": {
+    "title": "黑名单页面",
+    "subtitle": "你可以在这里查看被列入黑名单的用户。",
+    "home": "返回首页",
+    "desc": "前往关于页面",
+    "if_this_is_your_profile": "如果这是你的个人资料，并且你认为你被错误地列入黑名单，请提出申诉。",
+    "refresh_blacklist": "刷新黑名单",
+    "loading_blacklist": "正在加载黑名单",
+    "failed_blacklist": "加载黑名单失败",
+    "profile_outdated": "个人资料链接过时 - 缺少哈希值",
+    "user_discord_id": "用户 Discord ID {discordId}",
+    "user_discord_id_unknown": "用户 Discord ID 未知",
+    "appeal": "申诉",
+    "ban_appeal": "封禁申诉",
+    "user_not_found": "未找到用户",
+    "if_you_think_should_be_blacklisted": "如果你认为这个人应该被列入黑名单，请在TFT上和游戏内直接举报。",
+    "report": "举报",
+    "find_user": "通过 Discord ID 或个人资料名称查找用户",
+    "filter_by": "你可以通过 Discord ID 或个人资料名称进行筛选"
+  },
+  "Table": {
+    "columns": "列",
+    "no_results": "没有结果",
+    "items_per_page": "每页条目",
+    "currently_selected": "已选择 {current} 条，共 {total} 条",
+    "currently_showing": "显示 {total} 条数据",
+    "next": "下一页",
+    "previous": "上一页"
+  },
+  "TableHeader": {
+    "name": "姓名",
+    "reason": "原因",
+    "discord_id": "Discord ID",
+    "profile_name": "个人资料名称",
+    "blacklisted_on": "列入黑名单时间",
+    "is_active": "是否活跃",
+    "actions": "操作"
+  },
+  "Filters": {
+    "search": "搜索...",
+    "all": "所有",
+    "min": "最小",
+    "max": "最大",
+    "filter_info": "按列过滤",
+    "group_info": "按列分组",
+    "sort_info": "按列排序"
+  },
+  "Date": {
+    "unknown": "未知"
+  },
+  "LocaleSwitcher": {
+    "label": "更改语言",
+    "locale": "{locale, select, de {🇩🇪 德语} en {🇺🇸 英语} es {🇪🇸 西班牙语} fr {🇫🇷 法语} it {🇮🇹 意大利语} pt {🇵🇹 葡萄牙语} zh {🇨🇳 中文} ja {🇯🇵 日语} ko {🇰🇷 韩语} ru {🇷🇺 俄语} ar {🇸🇦 阿拉伯语} hi {🇮🇳 印地语} pl {🇵🇱 波兰语} uk {🇺🇦 乌克兰语} other {🌐 未知}}"
+  },
+  "ThemeSelector": {
+    "label": "更改主题",
+    "theme": "{theme, select, dark {黑暗} light {光明} system {系统} other {未知}}",
+    "light": "光明",
+    "dark": "黑暗",
+    "system": "系统"
+  },
+  "Links": {
+    "join_discord": "加入 Discord"
+  },
+  "DataAge": {
+    "last_updated": "最后更新时间: {date}",
+    "updated_at": "更新于",
+    "blacklisted_on": "列入黑名单时间"
+  },
+  "Toast": {
+    "success": "成功",
+    "error": "错误",
+    "warning": "警告",
+    "info": "信息",
+    "blacklist_updated": "黑名单已更新",
+    "copied_to_clipboard": "已复制到剪贴板",
+    "copied_discord_id_to_clipboard": "已复制 Discord ID 到剪贴板"
+  }
+}

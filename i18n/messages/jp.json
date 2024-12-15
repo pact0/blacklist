@@ -1,0 +1,91 @@
+{
+  "HomePage": {
+    "title": "こんにちは、世界！",
+    "about": "「About」ページに移動"
+  },
+  "Footer": {
+    "feedback": "フィードバック",
+    "support": "サポート",
+    "terms_and_conditions": "利用規約",
+    "privacy_policy": "プライバシーポリシー",
+    "ggg": "このツールはGrinding Gear Gamesとは一切関係ありません。"
+  },
+  "BlacklistPage": {
+    "title": "ブラックリストページ",
+    "subtitle": "ここでブラックリストに載っているユーザーを見ることができます。",
+    "home": "ホームページに戻る",
+    "desc": "「About」ページに移動",
+    "if_this_is_your_profile": "これがあなたのプロフィールで、間違ってブラックリストに載せられたと思う場合は、申立てを行ってください。",
+    "refresh_blacklist": "ブラックリストを更新",
+    "loading_blacklist": "ブラックリストを読み込み中",
+    "failed_blacklist": "ブラックリストの読み込みに失敗しました",
+    "profile_outdated": "プロフィールリンクが古い - ハッシュがありません",
+    "user_discord_id": "ユーザー Discord ID {discordId}",
+    "user_discord_id_unknown": "ユーザー Discord ID 不明",
+    "appeal": "申立て",
+    "ban_appeal": "BAN 申立て",
+    "user_not_found": "ユーザーが見つかりません",
+    "if_you_think_should_be_blacklisted": "この人がブラックリストに載せられるべきだと思う場合は、TFTでもゲーム内でも報告してください。",
+    "report": "報告",
+    "find_user": "Discord ID または プロフィール名でユーザーを検索",
+    "filter_by": "Discord ID または プロフィール名でフィルタリングできます"
+  },
+  "Table": {
+    "columns": "列",
+    "no_results": "結果がありません",
+    "items_per_page": "ページごとの項目",
+    "currently_selected": "{current} 件中 {total} 件選択",
+    "currently_showing": "{total} 件のアイテムが利用可能",
+    "next": "次へ",
+    "previous": "前へ"
+  },
+  "TableHeader": {
+    "name": "名前",
+    "reason": "理由",
+    "discord_id": "Discord ID",
+    "profile_name": "プロフィール名",
+    "blacklisted_on": "ブラックリスト登録日",
+    "is_active": "アクティブ",
+    "actions": "アクション"
+  },
+  "Filters": {
+    "search": "検索...",
+    "all": "すべて",
+    "min": "最小",
+    "max": "最大",
+    "filter_info": "列でフィルタリング",
+    "group_info": "列でグループ化",
+    "sort_info": "列で並べ替え"
+  },
+  "Date": {
+    "unknown": "不明"
+  },
+  "LocaleSwitcher": {
+    "label": "言語を変更",
+    "locale": "{locale, select, de {🇩🇪 ドイツ語} en {🇺🇸 英語} es {🇪🇸 スペイン語} fr {🇫🇷 フランス語} it {🇮🇹 イタリア語} pt {🇵🇹 ポルトガル語} zh {🇨🇳 中国語} ja {🇯🇵 日本語} ko {🇰🇷 韓国語} ru {🇷🇺 ロシア語} ar {🇸🇦 アラビア語} hi {🇮🇳 ヒンディー語} pl {🇵🇱 ポーランド語} uk {🇺🇦 ウクライナ語} other {🌐 未知}}"
+  },
+  "ThemeSelector": {
+    "label": "テーマを変更",
+    "theme": "{theme, select, dark {ダーク} light {ライト} system {システム} other {未知}}",
+    "light": "ライト",
+    "dark": "ダーク",
+    "system": "システム"
+  },
+  "Links": {
+    "join_discord": "Discordに参加"
+  },
+  "DataAge": {
+    "last_updated": "最終更新日時: {date}",
+    "updated_at": "更新日",
+    "blacklisted_on": "ブラックリスト登録日"
+  },
+  "Toast": {
+    "success": "成功",
+    "error": "エラー",
+    "warning": "警告",
+    "info": "情報",
+    "blacklist_updated": "ブラックリストが更新されました",
+    "copied_to_clipboard": "クリップボードにコピーしました",
+    "copied_discord_id_to_clipboard": "Discord ID をクリップボードにコピーしました"
+  }
+}
