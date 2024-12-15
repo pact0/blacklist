@@ -1,22 +1,35 @@
-name: Build and Deploy
+name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main # Deploy only when changes are pushed to the main branch
 permissions:
   contents: write
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      # Step 1: Check out the code
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        run: |
-          npm run build
-          touch out/.nojekyll
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      # Step 2: Setup Node.js and pnpm
+      - name: Setup Node.js and pnpm
+        uses: pnpm/action-setup@v3
         with:
-          folder: out # The folder the action should deploy.
+          node-version: 18 # Use the Node.js version required by your project
+          install-pnpm: true # Installs pnpm
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: pnpm install
+      # Step 4: Build and export the static site
+      - name: Build and export
+        run: |
+          pnpm build
+          pnpm export
+          mv out public
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: public

@@ -13,7 +13,6 @@ interface Props {
 
 export const BlacklistEntry = ({ entry }: Props) => {
   const { account_name, discord_id, reason, blacklisted_on } = entry;
-  const t = useTranslations("BlacklistPage");
   return (
     <div className="flex items-center justify-center ">
       <div className="w-36 grid grid-cols-[1fr,1fr,1fr,2fr]">
