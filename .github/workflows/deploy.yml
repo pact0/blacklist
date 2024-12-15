@@ -25,13 +25,11 @@ jobs:
       - name: Build and export
         run: |
           pnpm build
-          pnpm export
-          mv out public
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: public
+          publish_dir: out
           publish_branch: gh-pages
           enable_jekyll: true
