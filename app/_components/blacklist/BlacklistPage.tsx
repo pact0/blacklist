@@ -4,35 +4,10 @@ import Papa from "papaparse";
 import { parse } from "date-fns";
 import { useTranslations } from "next-intl";
 import { type BlacklistEntry as BlacklistEntryType } from "@/app/_models/BlacklistEntry";
-import { UpdatedAt } from "../DataAge";
-
-import { FloatingLabelInput } from "@/components/ui/floating-label-input";
-import { RefreshData } from "../RefreshData";
-import GenericTable from "../table/GenericTable";
-import {
-  getCoreRowModel,
-  getExpandedRowModel,
-  getFacetedMinMaxValues,
-  getFacetedRowModel,
-  getFacetedUniqueValues,
-  getFilteredRowModel,
-  getGroupedRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
-  useReactTable,
-} from "@tanstack/react-table";
-import { columns } from "./tableColumns";
-import { PaginationWithLinks } from "../table/Pagination";
-import { Button } from "@/components/ui/button";
-import { FilterX } from "lucide-react";
 import BlacklistTable from "./BlacklistTable";
-import { ReportLink } from "./ReportLink";
 
 const CSV_LINK =
   "https://raw.githubusercontent.com/The-Forbidden-Trove/ForbiddenTroveBlacklist/main/blacklist.csv";
-//
-
-//
 
 const parseActiveField = (value: unknown): boolean => {
   if (value == null) return false;

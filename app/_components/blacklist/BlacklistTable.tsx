@@ -111,10 +111,11 @@ export default function BlacklistTable({
   const totalRowCount = React.useMemo(() => table.getRowCount(), [table]);
   return (
     <div>
-      <div className="flex items-center mb-2">
+      <div className="w-full flex items-center justify-center my-4">
         <FloatingLabelInput
           id="filter-label"
-          className="w-96"
+          className="w-[40vw] h-12"
+          labelClassName="text-lg"
           disabled={isLoading}
           label={t("find_user")}
           value={globalFilter}
