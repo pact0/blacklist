@@ -111,7 +111,7 @@ export default function BlacklistTable({
   const totalRowCount = React.useMemo(() => table.getRowCount(), [table]);
   return (
     <div>
-      <div className="flex items-center">
+      <div className="flex items-center mb-2">
         <FloatingLabelInput
           id="filter-label"
           className="w-96"
