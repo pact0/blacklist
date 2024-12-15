@@ -16,11 +16,11 @@ jobs:
       - name: Setup Node.js and pnpm
         uses: pnpm/action-setup@v3
         with:
-          node-version: 18 # Use the Node.js version required by your project
+          node-version: 22 # Use the Node.js version required by your project
           install-pnpm: true # Installs pnpm
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
       # Step 4: Build and export the static site
       - name: Build and export
         run: |
