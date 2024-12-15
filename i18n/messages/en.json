@@ -3,15 +3,61 @@
     "title": "Hello world!",
     "about": "Go to the about page"
   },
+  "Footer": {
+    "feedback": "Feedback",
+    "support": "Support",
+    "terms_and_conditions": "Terms And Conditions",
+    "privacy_policy": "Privacy Policy",
+    "ggg": "This tool is not affiliated with Grinding Gear Games in any way."
+  },
   "BlacklistPage": {
     "title": "Blacklist Page",
     "home": "Go to the home page",
     "desc": "Go to the about page",
+    "if_this_is_your_profile": "If this is your profile and you think you have been blacklisted by mistake, please appeal.",
     "refresh_blacklist": "Refresh Blacklist",
     "loading_blacklist": "Loading Blacklist",
-    "failed_blacklist": "Failed to load blacklist"
+    "failed_blacklist": "Failed to load blacklist",
+    "profile_outdated": "Profile link is outdated - missing hash",
+    "user_discord_id": "User Discord ID {discordId}",
+    "user_discord_id_unknown": "User Discord ID unknown",
+    "appeal": "Appeal",
+    "ban_appeal": "Ban Appeal",
+    "user_not_found": "User not found",
+    "if_you_think_should_be_blacklisted": "If you think this person should be blacklisted, please report this on TFT as well as in the game directly.",
+    "report": "Report",
+    "find_user": "Find User",
+    "filter_by": "You can filter by discord ID or profile name"
   },
   "Date": {
     "unknown": "Unknown"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+  },
+  "ThemeSelector": {
+    "label": "Change theme",
+    "theme": "{theme, select, dark {Dark} light {Light} system {System} other {Unknown}}",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "Links": {
+    "join_discord": "Join Discord"
+  },
+  "DataAge": {
+    "last_updated": "Last updated: {date}",
+    "updated_at": "Updated at",
+    "blacklisted_on": "Blacklisted on"
+  },
+  "Toast": {
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Info",
+    "blacklist_updated": "Blacklist updated",
+    "copied_to_clipboard": "Copied to clipboard",
+    "copied_discord_id_to_clipboard": "Copied Discord ID to clipboard"
   }
 }

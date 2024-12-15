@@ -1,14 +1,17 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import BlacklistPage from "./BlacklistPage";
+import BlacklistPage from "../_components/blacklist/BlacklistPage";
+import Header from "../_components/header/Header";
+import Footer from "../_components/footer/Footer";
 
 const ClientPage = () => {
   const t = useTranslations("HomePage");
   return (
     <div>
-      <h1>{t("title")}</h1>
+      <Header />
       <BlacklistPage />
+      <Footer />
     </div>
   );
 };
