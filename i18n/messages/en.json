@@ -12,6 +12,7 @@
   },
   "BlacklistPage": {
     "title": "Blacklist Page",
+    "subtitle": "You can view blacklisted users here.",
     "home": "Go to the home page",
     "desc": "Go to the about page",
     "if_this_is_your_profile": "If this is your profile and you think you have been blacklisted by mistake, please appeal.",
@@ -26,15 +27,42 @@
     "user_not_found": "User not found",
     "if_you_think_should_be_blacklisted": "If you think this person should be blacklisted, please report this on TFT as well as in the game directly.",
     "report": "Report",
-    "find_user": "Find User",
+    "find_user": "Find User by Discord ID or Profile Name",
     "filter_by": "You can filter by discord ID or profile name"
+  },
+  "Table": {
+    "columns": "Columns",
+    "no_results": "No Results",
+    "items_per_page": "Items per page",
+    "currently_selected": "{current} of {total} selected",
+    "currently_showing": "Available {total} items",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "TableHeader": {
+    "name": "Name",
+    "reason": "Reason",
+    "discord_id": "Discord ID",
+    "profile_name": "Profile Name",
+    "blacklisted_on": "Blacklisted On",
+    "is_active": "Is Active",
+    "actions": "Actions"
+  },
+  "Filters": {
+    "search": "Search...",
+    "all": "All",
+    "min": "Min",
+    "max": "Max",
+    "filter_info": "Filter column",
+    "group_info": "Group by column",
+    "sort_info": "Sort by column"
   },
   "Date": {
     "unknown": "Unknown"
   },
   "LocaleSwitcher": {
     "label": "Change language",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Español} fr {🇫🇷 Français} it {🇮🇹 Italiano} pt {🇵🇹 Português} zh {🇨🇳 中文} ja {🇯🇵 日本語} ko {🇰🇷 한국어} ru {🇷🇺 Русский} ar {🇸🇦 العربية} hi {🇮🇳 हिंदी} pl {🇵🇱 Polski} uk {🇺🇦 Українська} other {🌐 Unknown}}"
   },
   "ThemeSelector": {
     "label": "Change theme",

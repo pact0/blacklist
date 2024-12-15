@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { DataAge } from "@/components/ui/data-age";
-import { LocalizedDate } from "../[locale]/LocalizedDate";
+import { LocalizedDate } from "./LocalizedDate";
 
 interface Props {
   dataUpdatedAt: Date;

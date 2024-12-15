@@ -34,7 +34,6 @@ export const DiscordId = ({ discord_id }: Props) => {
     });
   };
 
-  console.log(discord_id);
   return (
     <TooltipProvider>
       <Tooltip open={isOpen} onOpenChange={setIsOpen}>
