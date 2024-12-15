@@ -1,38 +1,39 @@
-name: Deploy Next.js to GitHub Pages
+name: GitHub Pages
 on:
   push:
     branches:
       - main
-permissions:
-  contents: write
+  pull_request:
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      # Step 1: Check out the code
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-      # Step 2: Setup Node.js and pnpm
-      - name: Setup Node.js and pnpm
-        uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 9
+          run_install: false
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 22
-          install-pnpm: true
-      # Step 3: Install dependencies
+          cache: "pnpm"
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-      # Step 4: Build the static site and create .nojekyll file
+        run: pnpm install
       - name: Build the static site
         run: |
           pnpm build
           # Create .nojekyll to prevent GitHub Pages from ignoring certain files
           touch out/.nojekyll
-          # Ensure all built files (including assets) are added for deployment
-          git add out/
-          git commit --no-verify -m "Deploy static site to GitHub Pages"
-      # Step 5: Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: out # Using 'out' directly for GitHub Pages deployment
+          publish_dir: ./out
